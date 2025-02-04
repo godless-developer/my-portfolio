@@ -1,0 +1,61 @@
+.waves-demo {
+  font-weight: bold;
+  font-family: Austere;
+  z-index: 1;
+}
+
+.waves {
+  color: transparent;
+  font-size: 700px;
+  -webkit-text-stroke: 5px #3502523b;
+  position: relative;
+  top: -70;
+  left: 20%;
+}
+.waves:after {
+  content: attr(data-word);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #3502523b;
+  animation: waves 2s ease-in-out infinite forwards;
+}
+@keyframes waves {
+  0%,
+  100% {
+    clip-path: polygon(
+      0 66%,
+      11% 59%,
+      18% 51%,
+      26% 46%,
+      35% 41%,
+      48% 44%,
+      55% 54%,
+      63% 63%,
+      76% 60%,
+      82% 50%,
+      92% 48%,
+      100% 53%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0 66%,
+      8% 74%,
+      17% 77%,
+      28% 70%,
+      35% 57%,
+      48% 44%,
+      56% 39%,
+      69% 41%,
+      75% 47%,
+      84% 60%,
+      92% 61%,
+      100% 53%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
